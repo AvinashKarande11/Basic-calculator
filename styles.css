@@ -1,0 +1,106 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a9db5, #c0d9e8); /* Soft gradient background with cool blues */
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    background: #ffffff; /* White background for the calculator */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+    text-align: center;
+    padding: 30px;
+    width: 400px;
+}
+
+h1 {
+    color: #333; /* Dark text for header for easy readability */
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.display {
+    background: #f1f1f1; /* Light grey for the display area */
+    color: #333; /* Dark text color for contrast */
+    padding: 20px;
+    font-size: 2em;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #e0e0e0; /* Soft grey background for buttons */
+    color: #333; /* Dark text for better readability */
+}
+
+button:hover {
+    background-color: #d1d1d1; /* Slightly darker grey on hover */
+}
+
+button.operator {
+    background-color: #5cb85c; /* Soft green for operators */
+    color: white;
+}
+
+button.operator:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+}
+
+button.equal {
+    background-color: #f39c12; /* Warm yellow-orange for the equal button */
+    color: white;
+    grid-column: span 2; /* Make the equal button span two columns */
+}
+
+button.equal:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Styling for advanced operation buttons */
+button.operator, button.equal {
+    font-size: 1.1em;
+}
+
+button.operator, button.equal, button {
+    background-color: #f9f9f9; /* Soft background for buttons */
+    color: #333; /* Dark text for better readability */
+}
+
+button.operator:hover {
+    background-color: #56b556; /* A little brighter green when hovered */
+}
+
+/* Make sure all buttons are aligned properly */
+button:focus {
+    outline: none;
+}
